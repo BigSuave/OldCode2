@@ -1,0 +1,56 @@
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+	<title></title>
+
+	<style>
+
+input{
+
+	background-color: #2B025B;
+
+}
+ placeholder{
+
+ 	color: white;
+ }
+
+ .textStuff{
+
+ 	font-family: 'Open Sans' , sans-serif
+ }
+
+
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+		<!-- EVERY INPUT SHOULD COME WITH A PLACEHOLDER="" -->
+	<input class="textStuff" placeholder="Type Here"></input>
+
+	<button class="button">submit</button>
+
+	<script>
+
+		// TO EXTRACT WORDS FRM NPUT
+
+	$(".button").click(function(){
+    
+   	var text= $(".textStuff").val();
+	alert(text);
+	var username = $('.name').val();
+
+
+});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.min.js"> </script>
+<script src="C:\Users\wwwjl_000\Desktop\Ambition\Knect\lib/parse-1.2.19.js"></script>
+
+
+
+<title>Home Page</title>
+
+	<style>
+/*	#signUp{
+
+		padding: 50px;
+
+
+	}
+
+	#Login{
+
+
+		padding-left: 60px;
+	}*/
+
+	</style>
+</head>
+
+<body>
+
+
+<div
+  class="fb-like"
+  data-send="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
+<!-- LOGIN BOXES -->
+
+<!-- 		<div id="Login">
+
+			<input class="userName" placeholder="Alias/User Name">
+			<input class="passWord" input type="password" placeholder="Password">
+
+
+		</div>
+
+	<!-- SIGN IN BOXES -->
+	<div id= "signUp">
+		<!-- <input class="FirstName" placeholder="First Name">
+		<input class="LastName" placeholder="Last Name">
+		<input class="AliasUserName" placeholder="User Name/Alias">
+		<input class="Email" placeholder="Email">
+		<input class="Password" placeholder="Password">
+		<textarea class="Description" placeholder="What Type Of Artist Are You">
+ -->
+		</div> 
+
+<script>
+  window.fbAsyncInit = function() {
+  parse.facebookUtils.init({
+    appId      : '304210663090841', // Facebook App ID
+    channelUrl : 'file:///C:/Users/wwwjl_000/Desktop/Ambition/Knect/Front%20Page.html', // Channel File
+    cookie     : true, // enable cookies to allow Parse to access the session
+    xfbml      : true  // parse XFBML
+  });
+
+      window.fbAsyncInit = function() {
+         Parse.FacebookUtils.init({
+          appId      : '{304210663090841}',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+Parse.FacebookUtils.logIn(null, {
+  success: function(user) {
+    if (!user.existed()) {
+      alert("User signed up and logged in through Facebook!");
+    } else {
+      alert("User logged in through Facebook!");
+    }
+  },
+  error: function(user, error) {
+    alert("User cancelled the Facebook login or did not fully authorize.");
+  }
+});
+
+  
+    </script>
+
+
+<script>
+
+Parse.initialize("JFgQJtIX1T54dk53Q6YI2iuMa8lZ0NuU0yKrjIqD", "zR5GEe4mbFuF5rML7pLLKpKOy8dyFn5h0w4d5V6t");
+
+var user = new Parse.User();
+user.set("username", "New");
+user.set("password", "New");
+user.set("email", "newNew@gmail.com");
+  
+// other fields can be set just like with Parse.Object
+user.set("phone", "650-555-0000");
+  
+user.signUp(null, {
+  success: function(user) {
+    // Hooray! Let them use the app now.
+  },
+  error: function(user, error) {
+    // Show the error message somewhere and let the user try again.
+    alert("Error: " + error.code + " " + error.message);
+  }
+});
+
+
+</script>
+
+			
+		
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+            #container {width:300px; padding-left: 30px; padding-top: 200px;}
+ 
+            /* Nicely lines up the labels. */
+            form label {display:inline-block; width:140px;}
+ 
+            /* You could add a class to all the input boxes instead, if you like. That would be safer, and more backwards-compatible */
+            form input[type="text"],
+            form input[type="password"],
+            form input[type="email"] {width:160px;}
+ 
+            form .line {clear:both;}
+            form .line.submit {text-align:right;}
+            
+            .Dbox{display: inline-block;width: 140px;}
+            .welcome{display: inline-block;width: 140px; margin-left: 27%;}
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <div class='signUp'>
+                <h1 id='Signup'>Sign Up</h1>
+                <div class="line"><label for="username"></label><input type="text" placeholder='Full Name' id="username" /></div>
+                <div class="line"><label for="pwd"></label><input type="password" placeholder='Password' id="pwd" /></div>
+                <!-- You may want to consider adding a "confirm" password box also -->
+                <div class="line"><label for="alias"></label><input type="text" placeholder='Alias' id="surname" /></div>
+                <div class="line"><label for="dob"></label><input placeholder='Email/User Name' type="text" id="dob" /></div>
+                <div class="line"><label for="email"></label><input type="email" placeholder='Email' id="email" /></div>
+                <!-- Valid input types: http://www.w3schools.com/html5/html5_form_input_types.asp -->
+                <div class="line"><label for="tel"></label><input type="text" placeholder='Phone# (Optional)' id="tel" /></div>
+                <div class="line submit"><input type="submit" value="Submit"></div>
+                </form>
+            </div>
+        </div>

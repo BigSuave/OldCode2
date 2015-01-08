@@ -1,0 +1,67 @@
+<html>
+<head>
+
+<script src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+
+
+
+	<title>Chatty</title>
+
+	<style>
+
+
+	.single{
+
+		height:80px;
+		width: 90px; 
+
+	}
+
+
+
+
+
+
+	</style>
+
+
+
+</head>
+<body>
+	<input class="name" placeholder="Name">
+	<input class='message' placeholder='Message'>
+	<div class="chats"></div>
+<script>
+var myDataRef = new Firebase('https://radiant-fire-6396.firebaseio.com/');
+// Cretaing a chatbox
+	$('.message').keypress(function(event){
+
+		if (event.keyCode === 13){
+
+			var Usermessage = $('.message').val();
+			var name = $(".name").val();
+			
+
+			$('<div/>').text(name +': ' +  Usermessage).appendTo($('.chats'));
+			myDataRef.push({ name: name, message: Usermessage });
+
+
+
+			}
+		// console.log(event.keyCode);
+
+	});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
+

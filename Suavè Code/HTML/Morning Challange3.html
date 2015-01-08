@@ -1,0 +1,128 @@
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-latest.min.js">
+	</script>
+
+<style>
+
+.red{
+
+background-color: red;
+	/*height:200px;
+	width:200px;'
+	margin:0 auto;
+*/
+}
+
+.red:hover{
+	color: white;
+}
+
+.Green{
+
+	background-color: green;
+	top:0px;
+	position: relative;
+	/*height: 200px;
+	width:200px*/
+}
+
+.Green:hover{
+	color: white;
+}
+
+.Blue{
+
+	background-color: blue;
+
+	/*height: 200px;
+	width:200px
+*/
+}
+
+.Blue:hover{
+
+	color:white;
+}
+
+.colorChange{
+
+
+	background-color: purple;
+	transition: background-color, 1s;
+}
+
+
+	
+div{
+
+	margin-top: 50px;
+	height: 200px;
+	width:200px;
+	text-align: center;
+	display: inline-block;
+
+
+
+
+}
+.moved{
+
+	top: 200px;
+	position: absolute;
+	transition:top 1.5s;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+
+<div class="red">red</div>
+<div class="Green">Green</div>
+<div class="Blue">Blue</div>
+
+
+
+
+
+<script>
+
+$(".red").click(function(){
+    
+	alert("");
+
+});
+
+$(".Blue").click(function(){
+     
+     $(this).toggleClass("colorChange");
+
+	
+
+});
+
+$(".Green").click(function(){
+     
+     $(this).toggleClass("moved");
+
+	});
+
+	
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

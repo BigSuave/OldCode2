@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            #login{padding-left: 248px;}
+            #Knect{padding-left: 130px;}
+
+            #container {width:300px; padding-left: 200px; padding-top: 200px;}
+ 
+            /* Nicely lines up the labels. */
+            form label {display:inline-block; width:140px;}
+ 
+            /* You could add a class to all the input boxes instead, if you like. That would be safer, and more backwards-compatible */
+            form input[type="text"],
+            form input[type="password"],
+            form input[type="email"] {width:160px;}
+ 
+            form .line {clear:both;}
+            form .line.submit {text-align:right;}
+            
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <form>
+                <div class='signUp'>
+                <h1 id='Knect'>Start Knecting!</h1>
+                <div class="line"><label for="username"></label><input type="text" placeholder='Email/Username' id="username" /></div>
+                <div class="line"><label for="pwd"></label><input type="password" placeholder='Password' id="pwd"></div>
+                <div id='login'>
+                <button class="line">Login!</button></div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+    </html>
